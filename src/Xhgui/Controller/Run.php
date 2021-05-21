@@ -22,6 +22,7 @@ class Xhgui_Controller_Run extends Xhgui_Controller
         }
         $sort = $request->get('sort');
 
+
         $result = $this->_profiles->getAll(array(
             'sort' => $sort,
             'page' => $request->get('page'),

@@ -10,6 +10,9 @@
                 <th>
                   方法
                 </th>
+                <th>
+                    域名
+                </th>
                 <th>请求地址</th>
                 <th>
                     {{ helpers.sort_link('时间', base_url, 'time', paging, search) }}
@@ -55,6 +58,9 @@
               <a href="{{ url('run.view', {'id': result.id|trim }) }}">
                 {{result.meta('SERVER.REQUEST_METHOD')}}
               </a>
+            </td>
+            <td>
+                {{ result.meta.SERVER.SERVER_NAME }}
             </td>
             <td>
                 {% set addr = result.meta.url %}

@@ -9,7 +9,7 @@ return array(
      * support extension: uprofiler, tideways_xhprof, tideways, xhprof
      * default: xhprof
      */
-    'extension' => 'xhprof',
+    'extension' => 'tideways_xhprof',
 
     // Can be either mongodb or file.
     /*
@@ -21,7 +21,7 @@ return array(
     // Needed for file save handler. Beware of file locking. You can adujst this file path
     // to reduce locking problems (eg uniqid, time ...)
     //'save.handler.filename' => __DIR__.'/../data/xhgui_'.date('Ymd').'.dat',
-    'db.host' => 'mongodb://127.0.0.1:27017',
+    'db.host' => 'mongodb://172.30.5.180:27017',
     'db.db' => 'xhprof',
 
     // Allows you to pass additional options like replicaSet to MongoClient.
@@ -44,6 +44,7 @@ return array(
 
     'profiler.filter_path' => array(
         //'/home/admin/www/xhgui/webroot','F:/phpPro'
-    )
+    ),
+    'hidden_current_req'=>true
 
 );

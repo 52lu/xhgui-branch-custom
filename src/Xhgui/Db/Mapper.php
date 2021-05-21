@@ -89,7 +89,10 @@ class Xhgui_Db_Mapper
                 '$options' => 'i',
             );
         }
-
+        // 过滤请求当前连接
+        if (Xhgui_Config::read('hidden_current_req')){
+            $conditions['meta.SERVER.DOCUMENT_ROOT']['$not']['$regex'] = "/*.xhgui.*/";
+        }
         return $conditions;
     }
 
