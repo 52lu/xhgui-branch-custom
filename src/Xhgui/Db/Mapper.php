@@ -93,6 +93,12 @@ class Xhgui_Db_Mapper
         if (Xhgui_Config::read('hidden_current_req')){
             $conditions['meta.SERVER.DOCUMENT_ROOT']['$not']['$regex'] = "/*.xhgui.*/";
         }
+        // 域名
+        if (isset($search['host'])) {
+            $host = $search['host'];
+            $conditions['meta.SERVER.HTTP_HOST'] = $host;
+        }
+        var_dump($search,$conditions);
         return $conditions;
     }
 
