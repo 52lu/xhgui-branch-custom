@@ -98,7 +98,6 @@ class Xhgui_Db_Mapper
             $host = $search['host'];
             $conditions['meta.SERVER.HTTP_HOST'] = $host;
         }
-        var_dump($search,$conditions);
         return $conditions;
     }
 

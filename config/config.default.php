@@ -9,7 +9,7 @@ return array(
      * support extension: uprofiler, tideways_xhprof, tideways, xhprof
      * default: xhprof
      */
-    'extension' => 'tideways_xhprof',
+    'extension' => 'tideways',
 
     // Can be either mongodb or file.
     /*
